@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Bulud.NET</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>BuludWeb.ir</Authors>
+    <Company>BuludWeb</Company>
+    <Description>
+      Bulud.NET is a utility library for .NET applications that provides:
+      - Custom exception handling
+      - Global exception middleware with Serilog &amp; Loki integration
+      - Extension methods for EF Core, Claims, Collections, and more
+      - Base infrastructure for Repository &amp; DbContext
+      - Data exporting to CSV and PDF
+      - Authorization helpers and JWT utilities
+    </Description>
+    <PackageTags>bulud net jwt identity logging pdf serilog</PackageTags>
+    <RepositoryUrl>https://github.com/shayanblest/Bulud.NET.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/shayanblest/Bulud.NET.git</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="33.1.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.12" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.4.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.4.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="9.0.1-dev-02317" />
+    <PackageReference Include="Serilog.Sinks.Grafana.Loki" Version="8.3.1" />
+    <PackageReference Include="QuestPDF" Version="2025.7.0" />
+  </ItemGroup>
+
+</Project>
