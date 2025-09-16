@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Bulud.Communication.Sms.Kavenegar</PackageId>
+        <Version>1.0.0-alpha</Version>
+        <Authors>BuludWeb</Authors>
+        <Company>BuludWeb</Company>
+        <Description>
+            Bulud.Communication.Sms.Kavenegar is a lightweight .NET library providing integration with the Kavenegar SMS service for Bulud.Base interfaces.
+            Features include:
+                -Send SMS messages via Kavenegar API
+                -Fully compatible with Bulud.Base interfaces
+                -Reliable for production and real-world scenarios
+                -Easy integration with .NET DI
+        </Description>
+        <PackageTags>bulud send sms with the kavenegar</PackageTags>
+        <RepositoryUrl>https://github.com/shayanblest/Bulud.NET.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/shayanblest/Bulud.NET.git</PackageProjectUrl>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <RootNamespace>Bulud.communication.sms.kavenegar</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bulud.Base\Bulud.Base.csproj" />
+    </ItemGroup>
+
+</Project>
