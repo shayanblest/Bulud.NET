@@ -7,7 +7,7 @@ namespace Bulud.Otp;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddS3FileService(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInMemoryOtpService(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<OtpSettings>(configuration.GetSection("OtpSettings"));
         services.AddScoped<IOtpService, InMemoryOtpService>();
