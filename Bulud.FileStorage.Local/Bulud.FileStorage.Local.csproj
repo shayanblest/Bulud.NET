@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Bulud.FileStorage.Local</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>BuludWeb</Authors>
+        <Company>BuludWeb</Company>
+        <Description>
+            Bulud.FileStorage.Local is a .NET library providing local file storage implementation
+            for the Bulud.Base IFileServices interface. Features include:
+            - Upload, download, delete, and move files on local disk
+            - Fully compatible with Bulud.Base interfaces
+            - Easy integration with .NET DI
+        </Description>
+        <PackageTags>bulud local file storage net</PackageTags>
+        <RepositoryUrl>https://github.com/shayanblest/Bulud.NET.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/shayanblest/Bulud.NET.git</PackageProjectUrl>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bulud.Base\Bulud.Base.csproj" />
+    </ItemGroup>
+
+</Project>
