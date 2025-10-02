@@ -6,12 +6,12 @@
         <Nullable>enable</Nullable>
 
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageId>Bulud.Communicationl.Email</PackageId>
-        <Version>1.0.0-alpha</Version>
+        <PackageId>Bulud.Communication.Email</PackageId>
+        <Version>1.1.0</Version>
         <Authors>BuludWeb</Authors>
         <Company>BuludWeb</Company>
         <Description>
-            Bulud.Notification.Email is a lightweight .NET library providing an email notification service implementation for Bulud.Base interfaces.
+            Bulud.Communication.Email is a lightweight .NET library providing an email notification service implementation for Bulud.Base interfaces.
             Features include:
                 -Send email messages via SMTP or other providers
                 -Fully compatible with Bulud.Base interfaces

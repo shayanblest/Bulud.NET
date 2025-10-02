@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 
 namespace Bulud.Communication.Sms.KaveNegar;
 
-public class KavenegarService(IOptions<SmsSettings> settings) : ISmsService
+public class KaveNegarService(IOptions<SmsSettings> settings) : ISmsService
 {
     private readonly HttpClient _httpClient = new();
     private readonly SmsSettings _settings = settings.Value;

@@ -6,9 +6,9 @@ namespace Bulud.Communication.Sms.KaveNegar;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddKavenegar(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddKaveNegar(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddScoped<ISmsService, KavenegarService>();
+        services.AddScoped<ISmsService, KaveNegarService>();
         services.Configure<SmsSettings>(configuration.GetSection("SmsSettings"));
 
         return services;
