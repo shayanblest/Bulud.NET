@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿﻿using System.Diagnostics;
 using System.Security.Authentication;
 using System.Text.Json;
 using Bulud.Base.Exceptions;
@@ -40,8 +40,7 @@ public class GlobalExceptionMiddleware(
 
             LogInfo(context, stopwatch);
         }
-        catch (AppValidationException
-               ex) // TODO: Refactor Global Exception handler (use catch for every type of exception)
+        catch (AppValidationException ex) // TODO: Refactor Global Exception handler (use catch for every type of exception)
         {
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
             context.Response.ContentType = "application/problem+json";

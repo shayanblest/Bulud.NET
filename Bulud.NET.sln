@@ -16,9 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{2E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulud.Security.InMemoryOtp", "Bulud.Security.InMemoryOtp\Bulud.Security.InMemoryOtp.csproj", "{1ED3FF27-05AE-46BF-B816-8CB80EFA4FC4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "communication", "communication", "{610C5CAA-B39B-4E53-8043-05C1AB3D6CD1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communication", "Communication", "{610C5CAA-B39B-4E53-8043-05C1AB3D6CD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulud.Communication.Sms.Kavenegar", "Bulud.Communication.Sms.Kavenegar\Bulud.Communication.Sms.Kavenegar.csproj", "{8C8E0363-A273-4503-A71A-18606A650423}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulud.Communication.Sms.KaveNegar", "Bulud.Communication.Sms.KaveNegar\Bulud.Communication.Sms.KaveNegar.csproj", "{8C8E0363-A273-4503-A71A-18606A650423}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulud.Communication.Email", "Bulud.Communication.Email\Bulud.Communication.Email.csproj", "{58720BB9-AB01-48A0-A71A-8430AC183760}"
 EndProject
