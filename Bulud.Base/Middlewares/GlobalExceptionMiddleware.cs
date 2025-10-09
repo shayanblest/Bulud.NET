@@ -1,21 +1,22 @@
-﻿﻿using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Security.Authentication;
 using System.Text.Json;
 using Bulud.Base.Exceptions;
 using Bulud.Base.Extensions;
+using Bulud.Base.settingOptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace Bulud.Base.Middlewares;
 
 public class GlobalExceptionMiddleware(
     RequestDelegate next,
     ILogger<GlobalExceptionMiddleware> logger,
-    IHostEnvironment env,
-    IHttpContextAccessor httpContextAccessor)
+    IHttpContextAccessor httpContextAccessor,
+    IOptions<ErrorHandlingSettings> errorHandlingSettings)
 {
     private readonly JsonSerializerOptions _options = new JsonSerializerOptions
     {
@@ -132,7 +133,7 @@ public class GlobalExceptionMiddleware(
             {
                 Title = "خطای غیرمنتظره\u200cای رخ داده است.",
                 Status = StatusCodes.Status500InternalServerError,
-                Detail = env.IsDevelopment() ? ex.ToString() : null,
+                Detail = errorHandlingSettings.Value.ShowErrorDetail ? ex.ToString() : null,
                 Extensions = { ["traceId"] = traceId }
             });
         }

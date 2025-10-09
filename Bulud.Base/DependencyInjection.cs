@@ -1,16 +1,18 @@
 ﻿using System.Text;
+using Bulud.Base.settingOptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Bulud.Base.Extensions;
+namespace Bulud.Base;
 
 public static class DependencyInjection
 {
     public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
     {
         var jwtSettings = configuration.GetSection("JwtSettings").Get<JwtSettings>()!;
+        services.Configure<ErrorHandlingSettings>(configuration.GetSection("ErrorHandlingSettings"));
         services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
