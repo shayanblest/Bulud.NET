@@ -7,7 +7,7 @@
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Bulud.Base</PackageId>
-    <Version>1.1.0</Version>
+    <Version>1.1.2</Version>
     <Authors>BuludWeb</Authors>
     <Company>BuludWeb</Company>
     <Description>

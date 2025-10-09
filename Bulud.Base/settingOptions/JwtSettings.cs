@@ -1,4 +1,4 @@
-﻿namespace Bulud.Base;
+﻿namespace Bulud.Base.settingOptions;
 
 public class JwtSettings
 {
