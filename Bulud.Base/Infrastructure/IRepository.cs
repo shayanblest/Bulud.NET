@@ -4,7 +4,7 @@ namespace Bulud.Base.Infrastructure
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        Task<TEntity> Find(object id, RequestQuery? requestQuery = null);
+        Task<TEntity?> Find(object id, RequestQuery? requestQuery = null);
         Task<ListResult<TEntity>> Get(RequestQuery query);
         Task AddAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
