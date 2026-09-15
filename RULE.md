@@ -13,7 +13,9 @@ Work follows this order: Product Manager -> Orchestrator -> Developer -> Reviewe
 ## Change boundaries
 
 - Use GitHub Issues and Beads as the task system when available.
-- Create a branch from the live parent branch; use the `codex/` prefix unless the task specifies another branch name.
+- Treat `develop` as an integration-only branch. Never commit or push a change directly to `develop`.
+- Create every change branch from the current `develop` head; use the `codex/` prefix unless the task specifies another branch name.
+- Push the change branch and open a pull request targeting `develop`. Only the repository owner merges that pull request; agents must never merge it.
 - Each PR must link its issue, state validation performed, and avoid unrelated cleanup.
 - Preserve existing provider behavior during issue #12. Package moves, namespace alignment, project references, and compatibility-required dependency upgrades are allowed; new provider behavior is not.
 - Do not merge, publish packages, push branches, create remote issues, or alter external services without explicit user approval.
