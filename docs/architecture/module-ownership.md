@@ -68,9 +68,16 @@ Project-file coverage: `Bulud.Base/Bulud.Base.csproj` is the current shared pack
 | `Microsoft.AspNetCore.Identity.EntityFrameworkCore` 8.0.12 | `Bulud.Base` | `Bulud.EntityFrameworkCore` | `AppDbContextBase` and Identity persistence infrastructure. |
 | `Serilog.AspNetCore` 9.0.0, `Serilog.Settings.Configuration` 9.0.1-dev-02317, and `Serilog.Sinks.Grafana.Loki` 8.3.1 | `Bulud.Base` | `Bulud.AspNetCore` | HTTP request logging and web error middleware. The inventory records the existing package set; compatibility upgrades belong to T2 only if required for .NET 10. |
 | `Minio` 6.0.5 | `Bulud.FileStorage.S3` | `Bulud.FileStorage.S3` | S3 provider SDK only. |
-| `Microsoft.Extensions.Options` 9.0.0 | SMS and OTP providers | Respective provider packages | Options binding for `SmsSettings`, `OtpSettings`, and Minio settings; no abstraction dependency. |
-| `Microsoft.Extensions.Caching.Abstractions` 8.0.0 | OTP provider | `Bulud.Security.Otp.InMemory` | In-memory OTP cache implementation only. |
-| ASP.NET Core HTTP, MVC, authorization, hosting, static-files, configuration, DI, logging, and EF Core APIs currently obtained through `Bulud.Base` references | `Bulud.Base` and affected providers | `Bulud.AspNetCore`, `Bulud.EntityFrameworkCore`, `Bulud.Authentication.Jwt`, or the relevant provider | Split by API ownership during T2/T6/T8/T9/T10. Abstractions and Core must not retain framework references. |
+| `Microsoft.Extensions.Options` 9.0.0 | `Bulud.Communication.Sms.KaveNegar` | `Bulud.Communication.Sms.Kavenegar` | Options binding for `SmsSettings`; no communication-abstraction dependency. |
+| `Microsoft.Extensions.Options` 9.0.0 | `Bulud.Security.InMemoryOtp` | `Bulud.Security.Otp.InMemory` | Options binding for `OtpSettings`; no OTP-abstraction dependency. |
+| `Microsoft.Extensions.Caching.Abstractions` 8.0.0 | `Bulud.Security.InMemoryOtp` | `Bulud.Security.Otp.InMemory` | In-memory OTP cache implementation only. |
+| `ProjectReference` from `Bulud.Communication.Email` to `Bulud.Base` | `Bulud.Communication.Email` | `Bulud.Communication.Abstractions` | The email provider uses only `IEmailService`; it must not retain a reference to the former shared package. |
+| `ProjectReference` from `Bulud.Communication.Sms.KaveNegar` to `Bulud.Base` | `Bulud.Communication.Sms.KaveNegar` | `Bulud.Communication.Abstractions` | The Kavenegar provider uses only `ISmsService` plus its own options dependency. |
+| `ProjectReference` from `Bulud.FileStorage.Local` to `Bulud.Base` | `Bulud.FileStorage.Local` | `Bulud.FileStorage.Abstractions` | The Local provider uses only `IFilesService`; its web-host dependency is removed by T6. |
+| `ProjectReference` from `Bulud.FileStorage.S3` to `Bulud.Base` | `Bulud.FileStorage.S3` | `Bulud.FileStorage.Abstractions` | The S3 provider uses only `IFilesService` plus Minio; its form-file and web MIME dependencies are removed by T6. |
+| `ProjectReference` from `Bulud.Security.InMemoryOtp` to `Bulud.Base` | `Bulud.Security.InMemoryOtp` | `Bulud.Security.Otp.Abstractions` | The in-memory provider uses only `IOtpService` plus caching and options. |
+| ASP.NET Core HTTP, MVC, authorization, hosting, static-files, configuration, DI, and logging APIs currently supplied by the `Bulud.Base` web SDK | `Bulud.Base` | `Bulud.AspNetCore` | Web-host APIs move together; Core, abstractions, and providers do not retain these framework dependencies. |
+| EF Core APIs currently supplied by the `Bulud.Base` web SDK | `Bulud.Base` | `Bulud.EntityFrameworkCore` | EF infrastructure, repository/query helpers, and their EF framework dependency move together. |
 
 ## Required signature and registration changes
 
