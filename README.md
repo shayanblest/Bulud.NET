@@ -108,7 +108,14 @@ Bulud.NET follows a modular architecture where:
 
 ## Contributing
 
-Contributions are welcome! Please see our contributing guidelines and code of conduct.
+Contributions are welcome. The repository uses a pull-request-only workflow for `develop`:
+
+1. Create a branch from the current `develop` head for every change.
+2. Commit and push only to that change branch; do not commit or push directly to `develop`.
+3. Open a pull request targeting `develop`, with the related issue and validation evidence.
+4. Only the repository owner merges pull requests into `develop`.
+
+See [RULE.md](RULE.md) for the complete delivery workflow and [AGENTS.md](AGENTS.md) for repository guidance.
 
 ## License
 
