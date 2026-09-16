@@ -1,4 +1,4 @@
-﻿namespace Bulud.Base
+﻿namespace Bulud.EntityFrameworkCore
 {
     public class ListResult<T> where T : class
     {

@@ -1,4 +1,4 @@
-﻿namespace Bulud.Base.Queries
+﻿namespace Bulud.EntityFrameworkCore.Queries
 {
     public class RequestQuery
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bulud.Base.Infrastructure;
+namespace Bulud.EntityFrameworkCore.Infrastructure;
 
 public class AppDbContextBase<TUser,TRole, TUserRole>(DbContextOptions options)
     : IdentityDbContext<TUser, TRole, string, IdentityUserClaim<string>, TUserRole, IdentityUserLogin<string>, IdentityRoleClaim<string>, IdentityUserToken<string>>(options) where  TUser : IdentityUser where TRole : IdentityRole where TUserRole : IdentityUserRole<string>
