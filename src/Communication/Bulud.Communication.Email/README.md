@@ -1,11 +1,11 @@
 # Bulud.Communication.Email
 
-A lightweight .NET library providing email notification service implementation for Bulud.Base interfaces.
+A lightweight .NET library providing email notification service implementation for Bulud.Communication.Abstractions interfaces.
 
 ## Features
 
 - Send email messages via SMTP or other providers
-- Fully compatible with Bulud.Base interfaces
+- Fully compatible with Bulud.Communication.Abstractions interfaces
 - Suitable for production and testing environments
 - Easy integration with .NET DI
 
@@ -44,11 +44,11 @@ public class MyService
 
 ## Implementation Note
 
-This package provides the interface implementation for `IEmailService` from Bulud.Base. The actual email sending logic needs to be implemented based on your email provider (SMTP, SendGrid, etc.).
+This package provides the interface implementation for `IEmailService` from Bulud.Communication.Abstractions. The actual email sending logic needs to be implemented based on your email provider (SMTP, SendGrid, etc.).
 
 ## Dependencies
 
-- Bulud.Base
+- Bulud.Communication.Abstractions
 
 ## License
 

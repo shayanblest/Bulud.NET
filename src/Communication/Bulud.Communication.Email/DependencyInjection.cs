@@ -1,4 +1,4 @@
-﻿using Bulud.Base.Services;
+using Bulud.Communication.Abstractions.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

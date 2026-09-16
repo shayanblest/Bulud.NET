@@ -1,4 +1,4 @@
-﻿using Bulud.Base.Services;
+using Bulud.Communication.Abstractions.Services;
 using Microsoft.Extensions.Options;
 
 namespace Bulud.Communication.Sms.KaveNegar;

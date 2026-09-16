@@ -3,14 +3,14 @@
     <PropertyGroup>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Bulud.Communication.Email</PackageId>
-        <Version>1.1.0</Version>
+        <Version>2.0.0</Version>
         <Authors>BuludWeb</Authors>
         <Company>BuludWeb</Company>
         <Description>
-            Bulud.Communication.Email is a lightweight .NET library providing an email notification service implementation for Bulud.Base interfaces.
+            Bulud.Communication.Email is a lightweight .NET library providing an email notification service implementation for Bulud.Communication.Abstractions interfaces.
             Features include:
                 -Send email messages via SMTP or other providers
-                -Fully compatible with Bulud.Base interfaces
+                -Fully compatible with Bulud.Communication.Abstractions interfaces
                 -Suitable for production and testing environments
                 -Easy integration with .NET DI
         </Description>
@@ -21,7 +21,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Bulud.Base\Bulud.Base.csproj" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bulud.Communication.Abstractions\Bulud.Communication.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

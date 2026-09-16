@@ -1,4 +1,4 @@
-﻿using Bulud.Base.Services;
+using Bulud.Communication.Abstractions.Services;
 
 namespace Bulud.Communication.Email;
 
