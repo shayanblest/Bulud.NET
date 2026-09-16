@@ -4,6 +4,7 @@ using System.Text.Json;
 using Bulud.Base.Exceptions;
 using Bulud.Base.Extensions;
 using Bulud.Base.settingOptions;
+using Bulud.Core.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

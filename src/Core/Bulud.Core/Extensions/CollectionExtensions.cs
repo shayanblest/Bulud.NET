@@ -1,4 +1,4 @@
-﻿namespace Bulud.Base.Extensions;
+namespace Bulud.Core.Extensions;
 
 public static class CollectionExtensions
 {
