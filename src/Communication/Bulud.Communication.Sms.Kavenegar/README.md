@@ -1,11 +1,11 @@
 # Bulud.Communication.Sms.Kavenegar
 
-A lightweight .NET library providing integration with the Kavenegar SMS service for Bulud.Base interfaces.
+A lightweight .NET library providing integration with the Kavenegar SMS service for Bulud.Communication.Abstractions interfaces.
 
 ## Features
 
 - Send SMS messages via Kavenegar API
-- Fully compatible with Bulud.Base interfaces
+- Fully compatible with Bulud.Communication.Abstractions interfaces
 - Reliable for production and real-world scenarios
 - Easy integration with .NET DI
 
@@ -68,7 +68,7 @@ public class MyService
 
 ## Dependencies
 
-- Bulud.Base
+- Bulud.Communication.Abstractions
 - Microsoft.Extensions.Options
 
 ## License

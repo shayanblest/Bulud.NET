@@ -1,4 +1,4 @@
-﻿namespace Bulud.Base.Services;
+namespace Bulud.Communication.Abstractions.Services;
 
 public interface IEmailService
 {
