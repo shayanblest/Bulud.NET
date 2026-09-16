@@ -1,4 +1,6 @@
-﻿namespace Bulud.Base.Exporters;
+﻿using Bulud.Exporting.Abstractions.Exporters;
+
+namespace Bulud.Exporting.Exporters;
 
 public class ExportManager(IEnumerable<IExporter> exporters)
 {

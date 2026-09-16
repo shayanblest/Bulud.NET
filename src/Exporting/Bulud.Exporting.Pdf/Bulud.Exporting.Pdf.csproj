@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><GeneratePackageOnBuild>true</GeneratePackageOnBuild><PackageId>Bulud.Exporting.Pdf</PackageId><Version>1.0.0</Version><Authors>BuludWeb</Authors><Company>BuludWeb</Company><Description>PDF exporting provider for Bulud.NET.</Description><PackageTags>bulud exporting pdf</PackageTags><RepositoryUrl>https://github.com/shayanblest/Bulud.NET.git</RepositoryUrl><PackageProjectUrl>https://github.com/shayanblest/Bulud.NET.git</PackageProjectUrl><PackageLicenseExpression>Apache-2.0</PackageLicenseExpression></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\Bulud.Exporting.Abstractions\Bulud.Exporting.Abstractions.csproj" /><PackageReference Include="QuestPDF" /></ItemGroup>
+</Project>
