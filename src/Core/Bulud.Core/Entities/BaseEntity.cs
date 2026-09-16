@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
-namespace Bulud.Base.Entities;
+namespace Bulud.Core.Entities;
 
 public class BaseEntity
 {

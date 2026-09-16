@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Bulud.Base.Extensions;
+namespace Bulud.Core.Extensions;
 
 public static class ValidationHelper
 {

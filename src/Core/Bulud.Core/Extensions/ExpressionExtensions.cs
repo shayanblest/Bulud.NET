@@ -1,6 +1,6 @@
-﻿using System.Linq.Expressions;
+using System.Linq.Expressions;
 
-namespace Bulud.Base.Extensions;
+namespace Bulud.Core.Extensions;
 
 public static class ExpressionExtensions
 {

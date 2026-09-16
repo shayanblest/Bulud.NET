@@ -1,4 +1,4 @@
-namespace Bulud.Base.Exceptions;
+namespace Bulud.Core.Exceptions;
 
 public static class DateExtensions
 {

@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Bulud.Base.Converters;
+namespace Bulud.Core.Converters;
 
 public class UtcDateTimeConverter : JsonConverter<DateTime>
 {
