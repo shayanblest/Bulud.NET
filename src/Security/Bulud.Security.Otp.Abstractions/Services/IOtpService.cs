@@ -1,4 +1,4 @@
-﻿namespace Bulud.Base.Services;
+﻿namespace Bulud.Security.Otp.Abstractions.Services;
 
 public interface IOtpService
 {

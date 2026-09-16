@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>Bulud.Otp</RootNamespace>
+        <RootNamespace>Bulud.Security.Otp.InMemory</RootNamespace>
 
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageId>Bulud.Security.InMemoryOtp</PackageId>
-        <Version>1.1.0</Version>
+        <PackageId>Bulud.Security.Otp.InMemory</PackageId>
+        <Version>2.0.0</Version>
         <Authors>BuludWeb</Authors>
         <Company>BuludWeb</Company>
         <Description>
-            Bulud.Security.InMemoryOtp is a lightweight .NET library providing an in-memory
-            implementation of OTP (One-Time Password) service for Bulud.Base interfaces.
+            Bulud.Security.Otp.InMemory is a lightweight .NET library providing an in-memory
+            implementation of OTP (One-Time Password) service for Bulud.Security.Otp.Abstractions interfaces.
             Features include:
             - Generate and validate OTP codes in memory
-            - Fully compatible with Bulud.Base interfaces
+            - Fully compatible with Bulud.Security.Otp.Abstractions interfaces
             - Simple and fast for testing or lightweight applications
             - Easy integration with .NET DI
         </Description>
@@ -25,11 +25,14 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
         <PackageReference Include="Microsoft.Extensions.Options" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Bulud.Base\Bulud.Base.csproj"/>
+        <ProjectReference Include="..\Bulud.Security.Otp.Abstractions\Bulud.Security.Otp.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>
