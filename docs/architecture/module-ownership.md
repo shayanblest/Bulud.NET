@@ -56,7 +56,7 @@ Every hand-written C# source file in the current solution is accounted for below
 
 ## Dependency inventory and destination
 
-Project-file coverage: `Bulud.Base/Bulud.Base.csproj` is the current shared package; `Bulud.Communication.Email/Bulud.Communication.Email.csproj`, `Bulud.Communication.Sms.KaveNegar/Bulud.Communication.Sms.Kavenegar.csproj`, `Bulud.FileStorage.Local/Bulud.FileStorage.Local.csproj`, `Bulud.FileStorage.S3/Bulud.FileStorage.S3.csproj`, and `Bulud.Security.InMemoryOtp/Bulud.Security.InMemoryOtp.csproj` are existing provider projects; `Bulud.FileStorage.Azure/Bulud.FileStorage.Azure.csproj` is the reserved Azure placeholder. All target `net8.0` today and are assigned below for the direct `net10.0` migration.
+Project-file coverage: `Bulud.Base/Bulud.Base.csproj` is the current shared package; `Bulud.Communication.Email/Bulud.Communication.Email.csproj`, `Bulud.Communication.Sms.KaveNegar/Bulud.Communication.Sms.Kavenegar.csproj`, `Bulud.FileStorage.Local/Bulud.FileStorage.Local.csproj`, `Bulud.FileStorage.S3/Bulud.FileStorage.S3.csproj`, and `Bulud.Security.InMemoryOtp/Bulud.Security.InMemoryOtp.csproj` are existing provider projects; `Bulud.FileStorage.Azure/Bulud.FileStorage.Azure.csproj` is the reserved, non-packable Azure placeholder. All projects target `net10.0`; the ownership assignments below remain the plan for the package extraction stages.
 
 | Current direct dependency | Current owner | Target owner | Reason and boundary |
 | --- | --- | --- | --- |
