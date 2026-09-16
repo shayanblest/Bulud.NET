@@ -25,14 +25,14 @@ SMS service integration with Kavenegar API for sending text messages and OTP cod
 
 ### File Storage Packages
 
-#### [Bulud.FileStorage.Local](Bulud.FileStorage.Local/README.md)
+#### [Bulud.FileStorage.Local](src/FileStorage/Bulud.FileStorage.Local/README.md)
 Local file system storage implementation for development and simple deployments.
 
-#### [Bulud.FileStorage.S3](Bulud.FileStorage.S3/README.md)
+#### [Bulud.FileStorage.S3](src/FileStorage/Bulud.FileStorage.S3/README.md)
 S3-compatible storage implementation using MinIO client for cloud file storage.
 
-#### [Bulud.FileStorage.Azure](Bulud.FileStorage.Azure/README.md)
-Azure Blob Storage implementation for Microsoft Azure cloud storage.
+#### [Bulud.FileStorage.Azure](src/FileStorage/Bulud.FileStorage.Azure/README.md)
+Reserved, non-packable boundary for a future Azure provider.
 
 ### Security Packages
 
@@ -54,7 +54,6 @@ dotnet add package Bulud.Communication.Sms.KaveNegar
 # File Storage
 dotnet add package Bulud.FileStorage.Local
 dotnet add package Bulud.FileStorage.S3
-dotnet add package Bulud.FileStorage.Azure
 
 # Security
 dotnet add package Bulud.Security.Otp.InMemory

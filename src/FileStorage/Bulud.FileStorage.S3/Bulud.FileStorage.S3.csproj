@@ -3,14 +3,14 @@
     <PropertyGroup>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Bulud.FileStorage.S3</PackageId>
-        <Version>1.1.0</Version>
+        <Version>2.0.0</Version>
         <Authors>BuludWeb</Authors>
         <Company>BuludWeb</Company>
         <Description>
             Bulud.FileStorage.S3 is a .NET library providing S3 file storage implementation
-            for Bulud.Base IFileServices interface. Features include:
+            for the Bulud.FileStorage.Abstractions IFilesService interface. Features include:
             - Upload, download, delete, and move files in S3
-            - Fully compatible with Bulud.Base interfaces
+            - Implements the Bulud.FileStorage.Abstractions contracts
             - Easy integration with .NET DI
         </Description>
         <PackageTags>bulud s3 file storage aws net</PackageTags>
@@ -20,11 +20,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Bulud.Base\Bulud.Base.csproj" />
+      <ProjectReference Include="..\Bulud.FileStorage.Abstractions\Bulud.FileStorage.Abstractions.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Minio" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" VersionOverride="9.0.4" />
+      <PackageReference Include="Microsoft.Extensions.Options" VersionOverride="9.0.4" />
+      <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
     </ItemGroup>
 
 </Project>
