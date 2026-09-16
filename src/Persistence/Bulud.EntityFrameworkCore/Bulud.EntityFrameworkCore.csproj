@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><GeneratePackageOnBuild>true</GeneratePackageOnBuild><PackageId>Bulud.EntityFrameworkCore</PackageId><Version>1.0.0</Version><Authors>BuludWeb</Authors><Company>BuludWeb</Company><Description>Entity Framework Core persistence infrastructure for Bulud.NET.</Description><PackageTags>bulud entityframeworkcore persistence</PackageTags><RepositoryUrl>https://github.com/shayanblest/Bulud.NET.git</RepositoryUrl><PackageProjectUrl>https://github.com/shayanblest/Bulud.NET.git</PackageProjectUrl><PackageLicenseExpression>Apache-2.0</PackageLicenseExpression></PropertyGroup>
+  <ItemGroup><PackageReference Include="MediatR" /><PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" /></ItemGroup>
+</Project>

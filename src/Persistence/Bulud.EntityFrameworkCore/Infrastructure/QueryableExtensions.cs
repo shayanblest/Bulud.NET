@@ -1,10 +1,10 @@
 ﻿using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Bulud.Base.Queries;
+using Bulud.EntityFrameworkCore.Queries;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bulud.Base.Infrastructure
+namespace Bulud.EntityFrameworkCore.Infrastructure
 {
     public static class QueryableExtensions
     {

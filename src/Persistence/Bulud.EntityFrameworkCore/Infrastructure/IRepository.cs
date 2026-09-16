@@ -1,6 +1,6 @@
-﻿using Bulud.Base.Queries;
+﻿using Bulud.EntityFrameworkCore.Queries;
 
-namespace Bulud.Base.Infrastructure
+namespace Bulud.EntityFrameworkCore.Infrastructure
 {
     public interface IRepository<TEntity> where TEntity : class
     {
