@@ -1,5 +1,4 @@
-﻿using Bulud.Base.Services;
-using Microsoft.Extensions.Configuration;
+﻿using Bulud.FileStorage.Abstractions.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bulud.FileStorage.Local;

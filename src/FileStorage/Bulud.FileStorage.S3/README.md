@@ -1,30 +1,33 @@
-# Bulud.FileStorage.Azure
+# Bulud.FileStorage.S3
 
-A .NET library providing Azure Blob Storage implementation for Bulud.Base IFilesService interface.
+A .NET library providing S3 file storage implementation for the Bulud.FileStorage.Abstractions IFilesService interface.
 
 ## Features
 
-- Upload, download, delete, and move files in Azure Blob Storage
-- Fully compatible with Bulud.Base interfaces
+- Upload, download, delete, and move files in S3
+- Implements the Bulud.FileStorage.Abstractions contracts
 - Easy integration with .NET DI
 
 ## Installation
 
 ```bash
-dotnet add package Bulud.FileStorage.Azure
+dotnet add package Bulud.FileStorage.S3
 ```
 
 ## Usage
 
 ### Configuration
 
-Add Azure settings to your `appsettings.json`:
+Add MinIO/S3 settings to your `appsettings.json`:
 
 ```json
 {
-  "AzureSettings": {
-    "ConnectionString": "your-azure-connection-string",
-    "ContainerName": "your-container-name"
+  "MinioSettings": {
+    "Endpoint": "localhost:9000",
+    "AccessKey": "your-access-key",
+    "SecretKey": "your-secret-key",
+    "Bucket": "your-bucket-name",
+    "UseSSL": false
   }
 }
 ```
@@ -32,7 +35,7 @@ Add Azure settings to your `appsettings.json`:
 ### Dependency Injection Setup
 
 ```csharp
-builder.Services.AddAzureFileService(builder.Configuration);
+builder.Services.AddS3FileService(builder.Configuration);
 ```
 
 ### File Operations
@@ -49,7 +52,8 @@ public class MyService
 
     public async Task<string> UploadFile(IFormFile file)
     {
-        return await _fileService.Upload(file, "uploads", "myfile.jpg");
+        await using var stream = file.OpenReadStream();
+        return await _fileService.Upload(stream, file.Length, file.ContentType, "uploads", "myfile.jpg");
     }
 
     public async Task<(Stream stream, string contentType)> DownloadFile(string filePath)
@@ -71,8 +75,8 @@ public class MyService
 
 ## Dependencies
 
-- Bulud.Base
-- Azure.Storage.Blobs
+- Bulud.FileStorage.Abstractions
+- Minio
 
 ## License
 

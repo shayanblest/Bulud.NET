@@ -1,12 +1,10 @@
-﻿using Bulud.Base.Services;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+﻿using Bulud.FileStorage.Abstractions.Services;
 
 namespace Bulud.FileStorage.Local;
 
-public class LocalFileService(IWebHostEnvironment env) : IFilesService
+public class LocalFileService : IFilesService
 {
-    public async Task<string> Upload(IFormFile file, string destPath, string fileName)
+    public async Task<string> Upload(Stream stream, long length, string contentType, string destPath, string fileName)
     {
         var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", destPath);
         if (!Directory.Exists(path))
@@ -14,8 +12,8 @@ public class LocalFileService(IWebHostEnvironment env) : IFilesService
 
         var filePath = Path.Combine(path, fileName);
 
-        await using var stream = new FileStream(filePath, FileMode.Create);
-        await file.CopyToAsync(stream);
+        await using var outputStream = new FileStream(filePath, FileMode.Create);
+        await stream.CopyToAsync(outputStream);
 
         return $"/{destPath}/{fileName}";
     }
@@ -36,8 +34,9 @@ public class LocalFileService(IWebHostEnvironment env) : IFilesService
 
     public Task Move(string sourcePath, string destPath)
     {
-        var sPath = Path.Combine(env.WebRootPath, sourcePath.TrimStart('/'));
-        var dPath = Path.Combine(env.WebRootPath, destPath.TrimStart('/'));
+        var webRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+        var sPath = Path.Combine(webRootPath, sourcePath.TrimStart('/'));
+        var dPath = Path.Combine(webRootPath, destPath.TrimStart('/'));
         File.Move(sPath, dPath);
         return Task.CompletedTask;
     }
