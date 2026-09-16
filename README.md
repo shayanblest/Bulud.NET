@@ -36,7 +36,7 @@ Azure Blob Storage implementation for Microsoft Azure cloud storage.
 
 ### Security Packages
 
-#### [Bulud.Security.InMemoryOtp](Bulud.Security.InMemoryOtp/README.md)
+#### [Bulud.Security.Otp.InMemory](src/Security/Bulud.Security.Otp.InMemory/README.md)
 In-memory OTP (One-Time Password) service for authentication and verification.
 
 ## Installation
@@ -57,7 +57,7 @@ dotnet add package Bulud.FileStorage.S3
 dotnet add package Bulud.FileStorage.Azure
 
 # Security
-dotnet add package Bulud.Security.InMemoryOtp
+dotnet add package Bulud.Security.Otp.InMemory
 ```
 
 ## Quick Start

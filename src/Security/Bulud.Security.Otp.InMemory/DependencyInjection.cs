@@ -1,9 +1,9 @@
-﻿using Bulud.Base.Services;
+﻿using Bulud.Security.Otp.Abstractions.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Bulud.Otp;
+namespace Bulud.Security.Otp.InMemory;
 
 public static class DependencyInjection
 {

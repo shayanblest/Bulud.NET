@@ -1,18 +1,18 @@
-# Bulud.Security.InMemoryOtp
+# Bulud.Security.Otp.InMemory
 
-A lightweight .NET library providing an in-memory implementation of OTP (One-Time Password) service for Bulud.Base interfaces.
+A lightweight .NET library providing an in-memory implementation of OTP (One-Time Password) service for Bulud.Security.Otp.Abstractions contracts.
 
 ## Features
 
 - Generate and validate OTP codes in memory
-- Fully compatible with Bulud.Base interfaces
+- Fully compatible with Bulud.Security.Otp.Abstractions contracts
 - Simple and fast for testing or lightweight applications
 - Easy integration with .NET DI
 
 ## Installation
 
 ```bash
-dotnet add package Bulud.Security.InMemoryOtp
+dotnet add package Bulud.Security.Otp.InMemory
 ```
 
 ## Usage
@@ -69,7 +69,7 @@ public class AuthService
 
 ## Dependencies
 
-- Bulud.Base
+- Bulud.Security.Otp.Abstractions
 - Microsoft.Extensions.Caching.Abstractions
 - Microsoft.Extensions.Options
 

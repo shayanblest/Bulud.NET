@@ -1,9 +1,9 @@
 ﻿using System.Security.Cryptography;
-using Bulud.Base.Services;
+using Bulud.Security.Otp.Abstractions.Services;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 
-namespace Bulud.Otp;
+namespace Bulud.Security.Otp.InMemory;
 
 public class InMemoryOtpService(IMemoryCache cache, IOptions<OtpSettings> settings) : IOtpService
 {
