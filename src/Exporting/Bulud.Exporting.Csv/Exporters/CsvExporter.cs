@@ -1,8 +1,9 @@
 ﻿using System.Globalization;
 using System.Text;
+using Bulud.Exporting.Abstractions.Exporters;
 using CsvHelper;
 
-namespace Bulud.Base.Exporters;
+namespace Bulud.Exporting.Csv.Exporters;
 
 public class CsvExporter : IExporter
 {

@@ -8,7 +8,6 @@ A comprehensive utility library for .NET applications providing essential infras
 - **Global Exception Middleware**: Integrated with Serilog and Loki for logging and monitoring
 - **Extension Methods**: Utilities for EF Core, Claims, Collections, Dates, and more
 - **Base Infrastructure**: Repository pattern and DbContext base classes
-- **Data Exporting**: CSV and PDF export capabilities using CsvHelper and QuestPDF
 - **Authorization Helpers**: Permission-based authorization with JWT utilities
 - **JSON Converters**: UTC DateTime converter for consistent serialization
 
@@ -111,16 +110,6 @@ var query = context.Entities
     .ApplyPaging(1, 10);
 ```
 
-### Data Exporting
-
-```csharp
-var exporter = new ExportManager(new List<IExporter> { new CsvExporter(), new PdfExporter() });
-var result = exporter.TryExport(data, "text/csv", "export");
-if (result.HasValue) {
-    // Use result.Data, result.ContentType, result.FileName
-}
-```
-
 ### Authorization
 
 ```csharp
@@ -144,7 +133,6 @@ public IActionResult MyAction() {
 
 ## Dependencies
 
-- CsvHelper
 - MediatR
 - Microsoft.AspNetCore.Authentication.JwtBearer
 - Microsoft.AspNetCore.Identity.EntityFrameworkCore
@@ -153,7 +141,6 @@ public IActionResult MyAction() {
 - Serilog.AspNetCore
 - Serilog.Settings.Configuration
 - Serilog.Sinks.Grafana.Loki
-- QuestPDF
 
 ## License
 

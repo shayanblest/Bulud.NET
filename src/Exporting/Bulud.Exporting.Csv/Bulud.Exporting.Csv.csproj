@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><GeneratePackageOnBuild>true</GeneratePackageOnBuild><PackageId>Bulud.Exporting.Csv</PackageId><Version>1.0.0</Version><Authors>BuludWeb</Authors><Company>BuludWeb</Company><Description>CSV exporting provider for Bulud.NET.</Description><PackageTags>bulud exporting csv</PackageTags><RepositoryUrl>https://github.com/shayanblest/Bulud.NET.git</RepositoryUrl><PackageProjectUrl>https://github.com/shayanblest/Bulud.NET.git</PackageProjectUrl><PackageLicenseExpression>Apache-2.0</PackageLicenseExpression></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\Bulud.Exporting.Abstractions\Bulud.Exporting.Abstractions.csproj" /><PackageReference Include="CsvHelper" /></ItemGroup>
+</Project>

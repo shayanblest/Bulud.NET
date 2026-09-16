@@ -1,4 +1,4 @@
-﻿namespace Bulud.Base.Exporters;
+﻿namespace Bulud.Exporting.Abstractions.Exporters;
 
 public interface IExporter
 {

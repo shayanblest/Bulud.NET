@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using Bulud.Exporting.Abstractions.Exporters;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
-namespace Bulud.Base.Exporters;
+namespace Bulud.Exporting.Pdf.Exporters;
 
 public class PdfExporter : IExporter
 {
