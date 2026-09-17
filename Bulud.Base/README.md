@@ -8,7 +8,7 @@ A comprehensive utility library for .NET applications providing essential infras
 - **Global Exception Middleware**: Integrated with Serilog and Loki for logging and monitoring
 - **Extension Methods**: Utilities for EF Core, Claims, Collections, Dates, and more
 - **Base Infrastructure**: Repository pattern and DbContext base classes
-- **Authorization Helpers**: Permission-based authorization with JWT utilities
+- **Authorization Helpers**: Permission-based authorization helpers
 - **JSON Converters**: UTC DateTime converter for consistent serialization
 
 ## Installation
@@ -19,27 +19,11 @@ dotnet add package Bulud.Base
 
 ## Usage
 
-### Dependency Injection Setup
+### Package registration
 
-```csharp
-builder.Services.AddJwtAuthentication(builder.Configuration);
-builder.Services.Configure<ErrorHandlingSettings>(builder.Configuration.GetSection("ErrorHandlingSettings"));
-```
-
-### JWT Authentication
-
-Configure JWT settings in `appsettings.json`:
-
-```json
-{
-  "JwtSettings": {
-    "SecretKey": "your-secret-key",
-    "Issuer": "your-issuer",
-    "Audience": "your-audience",
-    "ExpireMinutes": 60
-  }
-}
-```
+JWT authentication is provided by `Bulud.Authentication.Jwt`, while web error
+handling is provided by `Bulud.AspNetCore`. See each package's README for the
+corresponding registration call.
 
 ### Exception Handling
 
@@ -134,10 +118,7 @@ public IActionResult MyAction() {
 ## Dependencies
 
 - MediatR
-- Microsoft.AspNetCore.Authentication.JwtBearer
 - Microsoft.AspNetCore.Identity.EntityFrameworkCore
-- Microsoft.IdentityModel.JsonWebTokens
-- Microsoft.IdentityModel.Tokens
 - Serilog.AspNetCore
 - Serilog.Settings.Configuration
 - Serilog.Sinks.Grafana.Loki

@@ -39,6 +39,11 @@ Reserved, non-packable boundary for a future Azure provider.
 #### [Bulud.Security.Otp.InMemory](src/Security/Bulud.Security.Otp.InMemory/README.md)
 In-memory OTP (One-Time Password) service for authentication and verification.
 
+### Authentication Packages
+
+#### [Bulud.Authentication.Jwt](src/Authentication/Bulud.Authentication.Jwt/README.md)
+JWT authentication configuration and ASP.NET Core authentication registration.
+
 ## Installation
 
 Each package can be installed independently via NuGet:
@@ -57,16 +62,19 @@ dotnet add package Bulud.FileStorage.S3
 
 # Security
 dotnet add package Bulud.Security.Otp.InMemory
+
+# Authentication
+dotnet add package Bulud.Authentication.Jwt
 ```
 
 ## Quick Start
 
-### Basic Setup with Bulud.Base
+### JWT and Web Setup
 
 ```csharp
 // Program.cs or Startup.cs
 builder.Services.AddJwtAuthentication(builder.Configuration);
-builder.Services.Configure<ErrorHandlingSettings>(builder.Configuration.GetSection("ErrorHandlingSettings"));
+builder.Services.AddErrorHandling(builder.Configuration);
 
 // Add middleware
 app.UseMiddleware<GlobalExceptionMiddleware>();

@@ -1,11 +1,11 @@
 ﻿using System.Text;
-using Bulud.Base.settingOptions;
+using Bulud.Authentication.Jwt.settingOptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Bulud.Base;
+namespace Bulud.Authentication.Jwt;
 
 public static class DependencyInjection
 {
