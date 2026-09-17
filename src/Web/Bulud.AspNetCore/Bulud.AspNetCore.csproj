@@ -15,7 +15,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FileStorage\Bulud.FileStorage.Abstractions\Bulud.FileStorage.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Core\Bulud.Core\Bulud.Core.csproj" />
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Settings.Configuration" />
+    <PackageReference Include="Serilog.Sinks.Grafana.Loki" />
   </ItemGroup>
 
 </Project>

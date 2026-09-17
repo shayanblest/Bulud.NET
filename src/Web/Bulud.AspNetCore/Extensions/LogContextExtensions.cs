@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 
-namespace Bulud.Base.Extensions;
+namespace Bulud.AspNetCore.Extensions;
 
 public static class LogContextExtensions
 {

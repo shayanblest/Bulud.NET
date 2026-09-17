@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 using System.Security.Authentication;
 using System.Text.Json;
-using Bulud.Base.Exceptions;
-using Bulud.Base.Extensions;
-using Bulud.Base.settingOptions;
+using Bulud.AspNetCore.Exceptions;
+using Bulud.AspNetCore.Extensions;
+using Bulud.AspNetCore.settingOptions;
 using Bulud.Core.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Bulud.Base.Middlewares;
+namespace Bulud.AspNetCore.Middlewares;
 
 public class GlobalExceptionMiddleware(
     RequestDelegate next,

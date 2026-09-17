@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Bulud.Base.Extensions;
+namespace Bulud.AspNetCore.Extensions;
 
 public static class ClaimsPrincipalExtensions
 {
