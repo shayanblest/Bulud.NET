@@ -143,6 +143,8 @@ Bulud.NET follows a modular architecture where:
 - **Provider and framework-integration packages** own their registration and SDK dependencies
 - **Dependency Injection** and configuration provide explicit service registration
 
+For package-boundary validation, versioning, and consumer migration notes, see the [migration guidance](docs/architecture/migration-guidance.md).
+
 ## Contributing
 
 Contributions are welcome. The repository uses a pull-request-only workflow for `develop`:
