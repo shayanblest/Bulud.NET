@@ -12,7 +12,6 @@ public static class DependencyInjection
     public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
     {
         var jwtSettings = configuration.GetSection("JwtSettings").Get<JwtSettings>()!;
-        services.Configure<ErrorHandlingSettings>(configuration.GetSection("ErrorHandlingSettings"));
         services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

@@ -1,4 +1,4 @@
-namespace Bulud.Base.settingOptions;
+namespace Bulud.AspNetCore.settingOptions;
 
 public class ErrorHandlingSettings
 {

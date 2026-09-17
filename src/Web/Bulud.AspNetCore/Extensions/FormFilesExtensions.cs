@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Bulud.Base.Extensions;
+namespace Bulud.AspNetCore.Extensions;
 
 public static class FileExtensionHelper
 {

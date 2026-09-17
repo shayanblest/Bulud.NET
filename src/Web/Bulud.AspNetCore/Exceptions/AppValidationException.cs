@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bulud.Base.Exceptions;
+namespace Bulud.AspNetCore.Exceptions;
 
 public class AppValidationException(Dictionary<string, string[]> errors, string? title = null) : Exception
 {

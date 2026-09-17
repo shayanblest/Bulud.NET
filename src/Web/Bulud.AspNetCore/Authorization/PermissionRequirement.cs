@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace Bulud.Base.Authorization;
+namespace Bulud.AspNetCore.Authorization;
 
 public class PermissionRequirement(string permission) : IAuthorizationRequirement
 {

@@ -1,10 +1,10 @@
-﻿using Bulud.Base.Authorization;
+﻿using Bulud.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Bulud.Base.Attributes;
+namespace Bulud.AspNetCore.Attributes;
 
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 public class PermissionRequirementAttribute(string permission) : AuthorizeAttribute, IAuthorizationFilter
