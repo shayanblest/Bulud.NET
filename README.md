@@ -6,24 +6,24 @@ A comprehensive collection of .NET libraries providing essential infrastructure 
 
 ### Core Package
 
-#### [Bulud.Base](Bulud.Base/README.md)
-The foundational library providing:
-- Custom exception handling with global middleware
-- Extension methods for EF Core, Claims, Collections, and more
-- Base infrastructure for Repository & DbContext patterns
-- Data exporting to CSV and PDF
-- Authorization helpers and JWT utilities
-- JSON converters and validation helpers
+#### `Bulud.Core`
+Dependency-free primitives, exceptions, converters, and common extensions.
 
 ### Communication Packages
 
-#### [Bulud.Communication.Email](Bulud.Communication.Email/README.md)
+#### `Bulud.Communication.Abstractions`
+Contracts shared by communication providers.
+
+#### [Bulud.Communication.Email](src/Communication/Bulud.Communication.Email/README.md)
 Email service implementation for sending notifications via SMTP or other providers.
 
-#### [Bulud.Communication.Sms.Kavenegar](Bulud.Communication.Sms.Kavenegar/README.md)
+#### [Bulud.Communication.Sms.Kavenegar](src/Communication/Bulud.Communication.Sms.Kavenegar/README.md)
 SMS service integration with Kavenegar API for sending text messages and OTP codes.
 
 ### File Storage Packages
+
+#### `Bulud.FileStorage.Abstractions`
+Storage contracts shared by local and S3 providers.
 
 #### [Bulud.FileStorage.Local](src/FileStorage/Bulud.FileStorage.Local/README.md)
 Local file system storage implementation for development and simple deployments.
@@ -36,6 +36,9 @@ Reserved, non-packable boundary for a future Azure provider.
 
 ### Security Packages
 
+#### `Bulud.Security.Otp.Abstractions`
+OTP contracts shared by OTP providers.
+
 #### [Bulud.Security.Otp.InMemory](src/Security/Bulud.Security.Otp.InMemory/README.md)
 In-memory OTP (One-Time Password) service for authentication and verification.
 
@@ -44,13 +47,35 @@ In-memory OTP (One-Time Password) service for authentication and verification.
 #### [Bulud.Authentication.Jwt](src/Authentication/Bulud.Authentication.Jwt/README.md)
 JWT authentication configuration and ASP.NET Core authentication registration.
 
+### Persistence and Web Packages
+
+#### `Bulud.EntityFrameworkCore`
+Entity Framework Core persistence infrastructure, repositories, and query helpers.
+
+#### `Bulud.AspNetCore`
+ASP.NET Core middleware, authorization, and web-host integration.
+
+### Exporting Packages
+
+#### `Bulud.Exporting.Abstractions`
+Exporter contracts shared by export implementations.
+
+#### `Bulud.Exporting`
+Export orchestration and provider selection.
+
+#### `Bulud.Exporting.Csv`
+CSV export provider.
+
+#### `Bulud.Exporting.Pdf`
+PDF export provider.
+
 ## Installation
 
-Each package can be installed independently via NuGet:
+Each package can be installed independently via NuGet; the following are common examples:
 
 ```bash
-# Core package
-dotnet add package Bulud.Base
+# Core
+dotnet add package Bulud.Core
 
 # Communication
 dotnet add package Bulud.Communication.Email
@@ -65,6 +90,11 @@ dotnet add package Bulud.Security.Otp.InMemory
 
 # Authentication
 dotnet add package Bulud.Authentication.Jwt
+
+# Persistence, web, and exporting
+dotnet add package Bulud.EntityFrameworkCore
+dotnet add package Bulud.AspNetCore
+dotnet add package Bulud.Exporting
 ```
 
 ## Quick Start
@@ -108,10 +138,10 @@ public class MyService
 
 Bulud.NET follows a modular architecture where:
 
-- **Bulud.Base** provides interfaces and base implementations
-- **Extension packages** implement specific interfaces for different providers
-- **Dependency Injection** is used for easy service registration and resolution
-- **Configuration-based setup** allows flexible deployment options
+- **Bulud.Core** contains dependency-free primitives
+- **Abstraction packages** provide contracts shared by their providers
+- **Provider and framework-integration packages** own their registration and SDK dependencies
+- **Dependency Injection** and configuration provide explicit service registration
 
 ## Contributing
 
