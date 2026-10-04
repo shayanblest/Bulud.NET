@@ -17,11 +17,12 @@ repository.
 Restore completed for all seven projects. The Release build completed with exit
 code `0` and zero errors.
 
-## Existing package warnings
+## Build warning follow-up
 
-The build reported existing warnings unrelated to this migration: nullable
-reference warnings in `ValidationHelper`, `QueryableExtensions`, and
-`FormFilesExtensions`; `NU5104` for the existing prerelease
-`Serilog.Settings.Configuration` dependency; and missing package readmes for
-existing packages. Dependency versions remain unchanged in this baseline; no
-compatibility-driven upgrade was required.
+The initial baseline reported nullable reference warnings in `ValidationHelper`,
+`QueryableExtensions`, and `FormFilesExtensions`, plus `NU5104` for a prerelease
+`Serilog.Settings.Configuration` dependency. Those warnings were resolved by
+adding null checks, correcting nullable annotations, checking reflection
+results, and moving to the stable `9.0.0` package. The current Release build
+completes with zero warnings and zero errors. NuGet emits informational messages
+for packable projects that do not include a package readme.

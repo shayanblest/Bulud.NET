@@ -29,7 +29,7 @@ public static class FileExtensionHelper
     /// <summary>
     /// Validates file extension and size
     /// </summary>
-    public static (bool IsValid, string ErrorMessage) ValidateFile(
+    public static (bool IsValid, string? ErrorMessage) ValidateFile(
         this IFormFile? file, 
         long maxSizeBytes = 10 * 1024 * 1024) // Default 5MB
     {

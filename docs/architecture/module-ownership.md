@@ -66,7 +66,7 @@ Project-file coverage: `Bulud.Base/Bulud.Base.csproj` is the current shared pack
 | `Microsoft.AspNetCore.Authentication.JwtBearer` 8.0.12 | `Bulud.Base` | `Bulud.Authentication.Jwt` | JWT registration and bearer options. |
 | `Microsoft.IdentityModel.JsonWebTokens` 8.4.0 and `Microsoft.IdentityModel.Tokens` 8.4.0 | `Bulud.Base` | `Bulud.Authentication.Jwt` | JWT token validation. |
 | `Microsoft.AspNetCore.Identity.EntityFrameworkCore` 8.0.12 | `Bulud.Base` | `Bulud.EntityFrameworkCore` | `AppDbContextBase` and Identity persistence infrastructure. |
-| `Serilog.AspNetCore` 9.0.0, `Serilog.Settings.Configuration` 9.0.1-dev-02317, and `Serilog.Sinks.Grafana.Loki` 8.3.1 | `Bulud.Base` | `Bulud.AspNetCore` | HTTP request logging and web error middleware. The inventory records the existing package set; compatibility upgrades belong to T2 only if required for .NET 10. |
+| `Serilog.AspNetCore` 9.0.0, `Serilog.Settings.Configuration` 9.0.0, and `Serilog.Sinks.Grafana.Loki` 8.3.1 | `Bulud.Base` | `Bulud.AspNetCore` | HTTP request logging and web error middleware. The settings package uses the stable release matching the Serilog 9.x line. |
 | `Minio` 6.0.5 | `Bulud.FileStorage.S3` | `Bulud.FileStorage.S3` | S3 provider SDK only. |
 | `Microsoft.Extensions.Options` 9.0.0 | `Bulud.Communication.Sms.KaveNegar` | `Bulud.Communication.Sms.Kavenegar` | Options binding for `SmsSettings`; no communication-abstraction dependency. |
 | `Microsoft.Extensions.Options` 9.0.0 | `Bulud.Security.InMemoryOtp` | `Bulud.Security.Otp.InMemory` | Options binding for `OtpSettings`; no OTP-abstraction dependency. |
