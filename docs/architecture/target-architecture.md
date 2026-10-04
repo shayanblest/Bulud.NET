@@ -38,6 +38,6 @@ src/
 
 - Target `net10.0` directly.
 - Preserve existing provider behavior; migration changes ownership rather than semantics.
-- Existing public packages begin their breaking release at `2.0.0`; new core and abstraction packages begin at `1.0.0`.
+- This release line uses `2.0.0` for every packable public package to keep the NuGet package set version-aligned.
 - Upgrade third-party dependencies only when .NET 10 compatibility requires it.
 - `Bulud.FileStorage.Azure` remains an architecture-only, non-packable reserved provider boundary until a dedicated implementation issue exists.

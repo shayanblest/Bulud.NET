@@ -8,7 +8,8 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddKaveNegar(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddScoped<ISmsService, KaveNegarService>();
+        services.AddScoped<KaveNegarService>();
+        services.AddScoped<ISmsService>(provider => provider.GetRequiredService<KaveNegarService>());
         services.Configure<SmsSettings>(configuration.GetSection("SmsSettings"));
 
         return services;

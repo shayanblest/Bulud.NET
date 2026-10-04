@@ -60,7 +60,10 @@ namespace Bulud.EntityFrameworkCore.Infrastructure
                 .MakeGenericMethod(entityType, propertyInfo.PropertyType);
 
             // Invoke the sorting method
-            return (IQueryable<T>)method.Invoke(null, new object[] { query, lambda });
+            if (method.Invoke(null, new object[] { query, lambda }) is not IQueryable<T> sortedQuery)
+                throw new InvalidOperationException("The generated query sort method returned an incompatible result.");
+
+            return sortedQuery;
         }
 
         public static IQueryable<T> ApplyFilters<T>(this IQueryable<T> query, string? filter)
@@ -285,8 +288,8 @@ namespace Bulud.EntityFrameworkCore.Infrastructure
             if (givenType.IsGenericType && givenType.GetGenericTypeDefinition() == genericType)
                 return true;
 
-            Type baseType = givenType.BaseType;
-            if (baseType == null) return false;
+            Type? baseType = givenType.BaseType;
+            if (baseType is null) return false;
 
             return IsAssignableFromGeneric(genericType, baseType);
         }
