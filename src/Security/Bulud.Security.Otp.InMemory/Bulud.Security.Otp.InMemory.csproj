@@ -5,7 +5,7 @@
 
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Bulud.Security.Otp.InMemory</PackageId>
-        <Version>2.0.0</Version>
+        <Version>2.0.1</Version>
         <Authors>BuludWeb</Authors>
         <Company>BuludWeb</Company>
         <Description>
